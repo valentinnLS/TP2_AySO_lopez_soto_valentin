@@ -1,0 +1,68 @@
+    1  ls -l
+    2  pwd
+    3  whoami
+    4  sudo fdisk -l
+    5  ls -la
+    6  ssh-keygen -t ed25519
+    7  ls -la
+    8  cd .ssh
+    9  ls -l
+   10  cat id_ed25519.pub
+   11  cd
+   12  pwd
+   13  mkdir repogit
+   14  cd repogit
+   15  git clone git@github.com:valentinnLS/TP2_AySO_lopez_soto_valentin.git
+   16  ls -l
+   17  cd TP2_AySO_lopez_soto_valentin/
+   18  ls -l
+   19  cd
+   20  exit
+   21  ls -l
+   22  cd repogit
+   23  cd TP2_AySO_lopez_soto_valentin/
+   24  cd
+   25  pwd
+   26  lsblk
+   27  sudo fdisk /dev/sdd
+   28  lsblk /dev/sdd
+   29  free
+   30  free -h
+   31  sudo mkswap /dev/sdd1
+   32  free -h
+   33  sudo swapon /dev/sdd1
+   34  free -h
+   35  swapon -s
+   36  cat /proc/swaps
+   37  sudo fdisk /dev/sdc
+   38  sudo wipefs -a /dev/sdc1
+   39  sudo wipefs -a /dev/sdc2
+   40  sudo wipefs -a /dev/sdd2
+   41  sudo wipefs -a /dev/sdd3
+   42  sudo wipefs -a /dev/sdd5
+   43  sudo wipefs -a /dev/sdd6
+   44  sudo pvcreate /dev/sdd2 /dev/sdd3 /dev/sdd5 /dev/sdd6 /dev/sdc1 /dev/sdc2
+   45  sudo pvs
+   46  sudo vgcreate vg_datos  /dev/sdc1 /dev/sdd2
+   47  sudo vgs
+   48  sudo pvs
+   49  sudo vgcreate vg_web /dev/sdc2
+   50  sudo pvs
+   51  sudo lvcreate -L 1G vg_web -n lv_web1
+   52  sudo lvcreate -L 512M vg_web -n lv_web2
+   53  sudo lvcreate -L 512M vg_web -n lv_web3
+   54  sudo lvs
+   55  sudo pvs
+   56  sudo fdisk -l
+   57  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web1
+   58  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web2
+   59  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web3
+   60  sudo pvs
+   61  sudo fdisk -l
+   62  cd repogit
+   63  cd TP2_AySO_lopez_soto_valentin/
+   64  pwd
+   65  sudo pvs > pvs.txt
+   66  sudo vgs > vgs.txt
+   67  sudo lvs > lvs.txt
+   68  history > historial_lvm.txt
